@@ -1,0 +1,19 @@
+prefix=/opt/qt-4.7.1
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include/QtMultimedia
+qt_config=lex yacc warn_on uic resources qt warn_on release incremental link_prl def_files_disabled no_mocdepend release stl qt_no_framework cross_compile release shared dll embedded largefile stl precompile_header exceptions_off dylib create_prl link_prl depend_includepath QTDIR_build qt_install_headers qt warn_on depend_includepath qmake_cache target_qt hide_symbols create_libtool create_pc explicitlib moc thread shared dll
+moc_location=/opt/qt-4.7.1/bin/moc
+uic_location=/opt/qt-4.7.1/bin/uic
+rcc_location=/opt/qt-4.7.1/bin/rcc
+lupdate_location=/opt/qt-4.7.1/bin/lupdate
+lrelease_location=/opt/qt-4.7.1/bin/lrelease
+
+Name: Qtmultimedia
+Description: Qtmultimedia Library
+Version: 4.7.1
+Libs: -L${libdir} -lQtMultimedia 
+Libs.private: -L/usr/local/tslib/lib -L/opt/qt-4.7.1/lib  -lQtGui -L/usr/local/tslib/lib -L/opt/qt-4.7.1/lib -lQtNetwork -lQtCore -lpthread   
+Cflags: -DQT_SHARED -I/opt/qt-4.7.1/include -I${includedir}
+Requires: QtCore QtGui
+
