@@ -6,4 +6,4 @@ then
   exit
 fi
 
-arm-none-linux-gnueabi-g++ $1 -lpthread -lrt -ldl -lopencv_world -o $2
+arm-none-linux-gnueabi-g++ $1 -Wno-psabi -lpthread -lrt -ldl -latomic -lopencv_world -o $2
